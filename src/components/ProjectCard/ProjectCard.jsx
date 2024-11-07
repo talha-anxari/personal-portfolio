@@ -206,39 +206,6 @@ const ProjectCard = () => {
         ))}
       </div>
 
-      <div className="min-h-[300px] flex flex-col items-center justify-center p-8 bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-800 dark:to-gray-900">
-        <div className="text-center max-w-xl mx-auto">
-          <h1 className="text-4xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-red-600 to-rose-600">
-            Create Your Account
-          </h1>
-          <div className="space-y-4">
-            <p className="text-lg text-gray-800 dark:text-gray-300">
-              Welcome to our community! Let's get started on your journey with
-              us.
-            </p>
-            <p className="text-gray-800 dark:text-gray-300 pb-4">
-              Join thousands of users who have already discovered the benefits
-              of being a member.
-            </p>
-            <Link
-              to={"/signUp"}
-              className="mt-10 px-8 py-3 bg-gradient-to-r from-red-600 to-rose-600 text-white rounded-lg font-semibold shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition duration-200"
-            >
-              Get Started
-            </Link>
-            <p className="text-sm text-gray-800 dark:text-gray-300 mt-4">
-              Already have an account?{" "}
-              <Link
-                to={"/signIn"}
-                className="text-red-600 hover:text-red-700 cursor-pointer"
-              >
-                Sign in
-              </Link>
-            </p>
-          </div>
-        </div>
-      </div>
-
       {/* <Link
         to="/addProject"
         className="flex items-center gap-2 mt-8 w-40 bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
