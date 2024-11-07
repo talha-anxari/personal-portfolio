@@ -208,12 +208,12 @@ const ProjectCard = () => {
         </div>
 
         {/* <Link
-        to="/addProject"
-        className="flex items-center gap-2 mt-8 w-40 bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
-      >
-        <PlusCircle className="w-5 h-5" />
-        <span>Add Project</span>
-      </Link> */}
+          to="/addProject"
+          className="flex items-center gap-2 mt-8 w-40 bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
+        >
+          <PlusCircle className="w-5 h-5" />
+          <span>Add Project</span>
+        </Link> */}
       </div>
     </div>
   );

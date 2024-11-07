@@ -26,7 +26,15 @@ const RightSection = () => {
       <div className="space-y-8">
         {/* Header Section */}
         <div className="text-center space-y-2">
-          <h2 className="text-red-600 font-medium text-lg">WEB DEVELOPER</h2>
+          <h2 className="text-lg font-bold text-white bg-red-600 inline-block px-4 py-1 rounded-full shadow-md tracking-wide">
+            WEB DEVELOPER
+          </h2>
+        </div>
+
+        {/* Date of Birth Section */}
+        <div>
+          <h3 className="text-white font-bold mb-3">DATE OF BIRTH</h3>
+          <p className="text-gray-300 text-sm">02 June 1997</p>
         </div>
 
         {/* Education Section */}
