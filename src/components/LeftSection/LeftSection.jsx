@@ -1,5 +1,7 @@
 import React from "react";
 import CenterSection from "../CenterSection/CenterSection";
+import { MdWork } from "react-icons/md";
+import { FaChalkboardTeacher } from "react-icons/fa";
 
 const skills = [
   {
@@ -33,12 +35,12 @@ const skills = [
   { name: "GitHub", icon: "github.png" },
   { name: "Canva", icon: "canva.png" },
 ];
+
 const LeftSection = () => {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-3 gap-4">
       {/* Profile Section */}
       <div className="space-y-6">
-        {/* Name Card */}
         <div className="bg-zinc-900 rounded-3xl p-6">
           <div className="flex items-center gap-2 mb-4">
             <div className="w-3 h-3 bg-red-600 rounded-full" />
@@ -46,23 +48,49 @@ const LeftSection = () => {
               Muhammad Talha Naeem Ansari
             </h2>
           </div>
-          <div className="rounded-2xl bg-red-600 overflow-hidden mb-4">
-            <img
-              src="https://img.freepik.com/free-photo/picture-elegant-young-fashion-man_158595-582.jpg?t=st=1730463868~exp=1730467468~hmac=f7372f814544e9c50202eba6a22420cb22eb2d1cdafe4eefd22a0d3a31ddb28f&w=996"
-              alt="Profile"
-              className="w-full aspect-square object-cover"
-            />
+          <div className="text-gray-300 space-y-6">
+            {/* Introduction */}
+            <p className="text-gray-300 text-sm leading-relaxed">
+              Hi, I'm Talha Ansari. I'm currently studying Full Stack Web and
+              Mobile App Development at Saylani Mass IT Training (SMIT). I have
+              a deep passion for technology and love creating websites and
+              mobile apps that are both useful and user-friendly. My main focus
+              right now is front-end development, and I work with tools like
+              Tailwind CSS, JavaScript, React.js, and Next.js to build
+              attractive and functional websites that offer a great user
+              experience.
+            </p>
           </div>
-          <p className="text-gray-300 text-sm mb-6">
-            Passionate about creating and designing websites with the best
-            engaging interfaces.
-          </p>
-          <button className="w-full bg-black text-white py-3 rounded-full hover:bg-zinc-800 transition-colors">
-            Download CV
-          </button>
+
+          {/* Work Experience Section */}
+          <div className="mt-3">
+            <h3 className="text-white font-bold mb-3">WORK EXPERIENCE</h3>
+            <div className="space-y-4">
+              <div className="flex items-start space-x-3">
+                <MdWork className="text-gray-400 mt-1" size={24} />
+                <div>
+                  <p className="text-sm text-gray-400">2020</p>
+                  <p className="font-medium text-gray-300">
+                    6 Month Remote Job
+                  </p>
+                  <p className="text-sm text-gray-300">Front end WordPress</p>
+                </div>
+              </div>
+              <div className="flex items-start space-x-3 my-1">
+                <FaChalkboardTeacher className="text-gray-400 mt-1" size={24} />
+                <div>
+                  <p className="text-sm text-gray-400">2024</p>
+                  <p className="font-medium text-gray-300">6 Month Training</p>
+                  <p className="text-sm text-gray-300">
+                    Full Stack Web and Mobile App Development at SMIT
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Skills Card */}
+        {/* Skills Section */}
         <div className="bg-zinc-900 rounded-3xl p-6">
           <h2 className="text-white text-xl mb-6">Skills</h2>
           <div className="grid grid-cols-3 gap-4 mb-6">
@@ -75,10 +103,6 @@ const LeftSection = () => {
               </div>
             ))}
           </div>
-          <p className="text-gray-400 text-sm">
-            Visit the projects section to see the work done with these web
-            technologies.
-          </p>
         </div>
       </div>
 

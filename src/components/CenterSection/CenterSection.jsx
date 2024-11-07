@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const CenterSection = () => {
   return (
@@ -10,14 +11,22 @@ const CenterSection = () => {
       />
       <div className="absolute bottom-10 left-10 right-10">
         <div className="backdrop-blur-md bg-white/10 p-6 rounded-2xl">
-          <h1 className="text-3xl text-white mb-6">Xian Gallers</h1>
+          <h1 className="text-3xl text-white mb-6">
+            Muhammad Talha Naeem Ansari
+          </h1>
           <div className="flex flex-col sm:flex-row gap-4">
-            <button className="bg-red-500 text-white px-8 py-2 rounded-full hover:bg-red-600 transition-colors">
+            <Link
+              to={"/projects"}
+              className="bg-red-500 text-white px-8 py-2 rounded-full hover:bg-red-600 transition-colors"
+            >
               Projects
-            </button>
-            <button className="bg-black text-white px-8 py-2 rounded-full hover:bg-zinc-800 transition-colors">
-              Services
-            </button>
+            </Link>
+            <Link
+              to={"/about"}
+              className="bg-black text-white px-8 py-2 rounded-full hover:bg-zinc-800 transition-colors"
+            >
+              Curriculum Vitae
+            </Link>
           </div>
         </div>
       </div>

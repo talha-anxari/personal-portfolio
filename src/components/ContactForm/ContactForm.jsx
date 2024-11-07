@@ -65,7 +65,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Email</p>
-                      <p className="text-white">hello@example.com</p>
+                      <p className="text-white">talhaanxaritn@outlook.com</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors">
@@ -74,7 +74,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Phone</p>
-                      <p className="text-white">+1 (555) 000-0000</p>
+                      <p className="text-white">03400262456</p>
                     </div>
                   </div>
                   <div className="flex items-center gap-4 text-gray-400 hover:text-white transition-colors">
@@ -83,7 +83,7 @@ const ContactForm = () => {
                     </div>
                     <div>
                       <p className="text-sm text-gray-500">Location</p>
-                      <p className="text-white">New York, USA</p>
+                      <p className="text-white">Pakistan Karachi</p>
                     </div>
                   </div>
                 </div>
