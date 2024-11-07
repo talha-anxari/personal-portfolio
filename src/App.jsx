@@ -8,11 +8,13 @@ import Home from "./pages/Home/Home";
 import MyState from "./context/myState";
 import About from "./pages/About/About";
 import ProjectCard from "./components/ProjectCard/ProjectCard";
+import ScrollTop from "./components/scrollTop/ScrollTop";
 
 const App = () => {
   return (
     <MyState>
       <Router>
+        <ScrollTop />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/contact-form" element={<ContactForm />} />
