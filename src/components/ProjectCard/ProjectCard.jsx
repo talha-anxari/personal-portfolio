@@ -141,78 +141,80 @@ const ProjectCard = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="w-full max-w-7xl mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-center mb-12 text-gray-500 dark:text-white">
-        Recent Projects
-      </h1>
+    <div className="w-full min-h-screen bg-black text-white">
+      <div className="w-full max-w-7xl mx-auto px-4 py-8">
+        <h1 className="text-4xl font-bold text-center mb-12 text-gray-500 dark:text-white">
+          Recent Projects
+        </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-        {getAllProject?.map((project, index) => (
-          <Card
-            key={index}
-            className="bg-gray-800 dark:bg-gray-800 shadow-lg rounded-2xl overflow-hidden"
-          >
-            <div className="relative h-52 w-full">
-              <img
-                onClick={() => navigate(`/projectDetail/${project.id}`)}
-                src={project.mainImageUrl}
-                alt={project.title}
-                className="w-full h-full object-cover"
-              />
-            </div>
-
-            <CardHeader className="px-6 pt-4">
-              <h3 className="text-xl font-bold text-gray-500 dark:text-white">
-                {project.title}
-              </h3>
-            </CardHeader>
-
-            <CardContent className="px-6 pb-4">
-              <p className="text-gray-600 dark:text-gray-400 mb-4">
-                {project.description.slice(0, 100)}...
-              </p>
-
-              <div className="flex flex-wrap gap-2 mb-4">
-                {project.technologies?.map((tech, techIndex) => (
-                  <span
-                    key={techIndex}
-                    className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-400"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              <div className="flex items-center justify-between">
-                <Link
-                  to={project.demoUrl || "#"}
-                  className="inline-flex items-center text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 transition-colors"
-                  target="_blank"
-                >
-                  <span className="mr-2">Visit Project</span>
-                  <ExternalLink className="w-4 h-4" />
-                </Link>
-
-                <Button
-                  variant="secondary"
-                  className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white"
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          {getAllProject?.map((project, index) => (
+            <Card
+              key={index}
+              className="bg-gray-950 dark:bg-gray-900 shadow-lg rounded-2xl overflow-hidden"
+            >
+              <div className="relative h-52 w-full">
+                <img
                   onClick={() => navigate(`/projectDetail/${project.id}`)}
-                >
-                  View Details
-                </Button>
+                  src={project.mainImageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover"
+                />
               </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
 
-      {/* <Link
+              <CardHeader className="px-6 pt-4">
+                <h3 className="text-xl font-bold text-gray-500 dark:text-white">
+                  {project.title}
+                </h3>
+              </CardHeader>
+
+              <CardContent className="px-6 pb-4">
+                <p className="text-gray-600 dark:text-gray-400 mb-4">
+                  {project.description.slice(0, 100)}...
+                </p>
+
+                <div className="flex flex-wrap gap-2 mb-4">
+                  {project.technologies?.map((tech, techIndex) => (
+                    <span
+                      key={techIndex}
+                      className="px-3 py-1 bg-gray-200 dark:bg-gray-700 rounded-full text-sm text-gray-600 dark:text-gray-400"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+
+                <div className="flex items-center justify-between">
+                  <Link
+                    to={project.demoUrl || "#"}
+                    className="inline-flex items-center text-blue-500 hover:text-blue-700 dark:text-blue-400 dark:hover:text-blue-500 transition-colors"
+                    target="_blank"
+                  >
+                    <span className="mr-2">Visit Project</span>
+                    <ExternalLink className="w-4 h-4" />
+                  </Link>
+
+                  <Button
+                    variant="secondary"
+                    className="bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white"
+                    onClick={() => navigate(`/projectDetail/${project.id}`)}
+                  >
+                    View Details
+                  </Button>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* <Link
         to="/addProject"
         className="flex items-center gap-2 mt-8 w-40 bg-blue-500 hover:bg-blue-600 text-white rounded-lg px-4 py-2 transition-all duration-300 hover:shadow-lg hover:scale-105 transform"
       >
         <PlusCircle className="w-5 h-5" />
         <span>Add Project</span>
       </Link> */}
+      </div>
     </div>
   );
 };
